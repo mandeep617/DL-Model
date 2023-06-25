@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Is Your Text Suicidal?</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The text "<b>{{ text }}</b>" {{ prediction }}.</p>
+    <p>Sucidal possibility: <b>{{confidence}} %</b></p>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Is Your Text Suicidal?</title>
+</head>
+<body>
+    <h1>Is Your Text Suicidal?</h1>
+    <form method="POST" action="/predict">
+        <label for="text">Enter your text:</label><br>
+        <textarea name="text" id="text" rows="5" cols="50"></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction Result</h2>
+    <p>The text "<b>{{ text }}</b>" {{ prediction }}.</p>
+    <p>Sucidal possibility: <b>{{confidence}} %</b></p>
+
+
+    {% endif %}
+    <p><strong>Help is available at: 9152987821 Please refer to this website for more help:&nbsp;</strong><a data-fr-linked="true" href="https://findahelpline.com/"><strong>https://findahelpline.com/</strong></a></p>
+</body>
+</html>
